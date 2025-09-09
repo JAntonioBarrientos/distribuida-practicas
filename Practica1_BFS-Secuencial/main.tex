@@ -1,0 +1,67 @@
+\documentclass[12pt, a4paper]{article}
+
+%=============== PAQUETES BÁSICOS ===============
+% Paquete para poder usar acentos y caracteres en español
+\usepackage[utf8]{inputenc}
+% Paquete para la correcta división de sílabas y títulos en español
+\usepackage[spanish]{babel}
+% Paquete para configurar los márgenes de la página
+\usepackage{geometry}
+% Paquete para mejorar el espaciado entre párrafos
+\usepackage{parskip}
+
+%=============== CONFIGURACIÓN DE MÁRGENES ===============
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=3cm,
+    bottom=3cm
+}
+
+%=============== INICIO DEL DOCUMENTO ===============
+\begin{document}
+
+%=============== ENCABEZADO DE LA PRÁCTICA ===============
+% Usamos el entorno 'center' para centrar el bloque de título
+\begin{center}
+    % Nombre de la materia
+    \textbf{\Large Computación Distribuida 2026-1} \\
+    \vspace{0.75cm} % Espacio vertical
+    % Título de la práctica
+    \textbf{\Large Práctica 1: BFS Secuencial} \\
+    \vspace{1.5cm} % Espacio vertical más grande
+
+    % Datos del profesor y ayudantes
+    \begin{tabular}{l}
+        \textbf{Profesor:} Mauricio Riva Palacio Orozco \\
+        \textbf{Ayudantes:} Adrián Felipe Fernández Romero y Alan Alexis Martínez López \\
+    \end{tabular}
+\end{center}
+
+\vspace{1cm} % Espacio antes del contenido principal
+
+%=============== CUERPO DEL DOCUMENTO ===============
+
+\section*{Integrantes}
+% Usamos una lista para los nombres
+\begin{itemize}
+    \item Wendy Sánchez Cortés
+    \item Andrea Valeria Figueroa Barrientos
+    \item José Antonio Barrientos Sánchez
+\end{itemize}
+
+
+\section*{Breve explicación del BFS}
+
+El algoritmo BFS visita la gráfica por niveles, esto lo logra usando la estructura de una cola pues la cola el primero que entra es el primero que sale lo que mantiene que primero se visiten los vecinos (distancia 1) y aunque se agreguen los vecinos de los vecinos, estos no saldrán de la cola hasta que de la cola ya salieron sus padres, así se genera en orden por niveles.
+
+Para hacer esto también usamos un "visitados" para saber a quién ya visitamos y ya agregamos sus vecinos en la cola para no repetir.
+
+\vfill % Este comando empuja el contenido siguiente al final de la página
+
+%=============== PIE DE PÁGINA ===============
+\begin{flushright} % Alinea la fecha a la derecha
+    \textbf{Fecha de entrega:} 12 de Septiembre 2024
+\end{flushright}
+
+\end{document}
